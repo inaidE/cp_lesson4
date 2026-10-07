@@ -34,7 +34,6 @@ class Term {
 
 class MiniMaple {
     diff(expression, variable) {
-        // 1. Проверка на наличие запятой (передана ли переменная)
         if (variable === undefined || variable === null) {
             throw new Error('Неверный формат! Ожидается выражение вида: "полином, переменная"');
         }

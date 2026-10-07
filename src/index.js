@@ -14,10 +14,8 @@ function calculateDiff() {
 
     try {
         const result = maple.diff(expr, variable);
-        // Обертываем результат в символы $$ для распознавания синтаксиса Latex/MathJax[cite: 3]
         container.innerHTML = `$$${result}$$`;
 
-        // Заставляем MathJax обработать новые элементы в DOM
         if (window.MathJax) {
             MathJax.typesetPromise([container]);
         }
